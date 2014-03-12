@@ -1,0 +1,10 @@
+@(products: List[ProductModel] )
+@index("All products"){
+	<ul>
+@for(product <- products){
+	<li><a href="/viewproduct/@product.id">@product.name</a></li>
+	<li>@product.price</li>
+	<br>
+}
+</ul>
+}
