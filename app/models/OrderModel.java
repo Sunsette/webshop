@@ -2,8 +2,13 @@ package models;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class OrderModel
 {
+	@Id
 	private int orderId = 0;
 	private UserModel user;
 	private List<ProductModel> products;

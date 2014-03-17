@@ -1,6 +1,10 @@
 @* showoneproduct Template File *@
 @(product: models.ProductModel)
 @index(""){
-<h2>Product name: @product.name</h2>
-<h2>Price: @product.price</h2>
+<h2>Product name: @product.getName()</h2>
+<h2>Price: @product.getRrp()</h2>
+<br>
+<ul class="pagination">
+<li><a href="/viewallproducts">&laquo;</a></li>
+</ul>
 }

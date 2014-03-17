@@ -1,8 +1,14 @@
 package models;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+@Entity
 public final class UserModel {
 	public static final int DEFAULT_USER_ID = -1;
 	
+	@Id
 	private final int id;
 	private final String email;
 	private final String password;

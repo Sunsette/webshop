@@ -3,7 +3,7 @@
 # ~~~~
 
 # Home page
-#GET     /                           controllers.Application.index()
+GET     /                           controllers.Application.homePage()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
@@ -12,12 +12,18 @@ GET   /homepage                     controllers.Application.homePage()
 
 GET   /categories                  controllers.Application.viewAllCategories()
 
+GET  /category/:categoryName        controllers.ProductControl.viewProductsOfCategory(categoryName)
+
 GET   /viewallproducts                     controllers.ProductControl.viewAllProducts()
 
-GET   /shoppingCart                 controllers.Application.viewShoppingCart()
+GET   /createuser                    controllers.Application.createUser()
+
+GET   /shoppingcart                 controllers.Application.viewShoppingCart()
 
 GET   /checkout                    controllers.Application.checkout()
 
-GET   /products/:productName        controllers.ProductControl.searchProduct(productName)
+GET   /productsearch/:productName        controllers.ProductControl.searchProduct(productName)
 
-GET   /viewproduct/:id                  controllers.ProductControl.viewOneProduct(id: Int)
+GET   /products/:id                  controllers.ProductControl.viewOneProduct(id: Int)
+
+GET   /populatedb                    controllers.ProductControl.populateDB()

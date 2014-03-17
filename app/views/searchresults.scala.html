@@ -1,5 +1,10 @@
 @* searchresults Template File *@
-@(param: Any)
-@index(""){
-<h2>@param</h2>
+@(products: List[ProductModel])
+@index("Search Results"){
+	<ul>
+	@for(product <- products){
+		<li><a href="/products/@product.getId()">@product.getName()</a></li>
+		<br>
+	}
+	</ul>
 }

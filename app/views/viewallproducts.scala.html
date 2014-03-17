@@ -2,9 +2,15 @@
 @index("All products"){
 	<ul>
 @for(product <- products){
-	<li><a href="/viewproduct/@product.id">@product.name</a></li>
-	<li>@product.price</li>
+	<li><a href="/products/@product.getId()">@product.getName()</a></li>
+	<li>@product.getRrp()</li>
 	<br>
 }
+</ul>
+<br>
+<ul class="pagination">
+<li><a href="#">&laquo;</a></li>
+<li><a href="/viewallproducts">1</a></li>
+<li><a href="#">&raquo;</a></li>
 </ul>
 }

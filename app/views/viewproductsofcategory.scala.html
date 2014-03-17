@@ -1,0 +1,12 @@
+
+@(products: List[ProductModel])(category: String)
+@index(""){
+	<h1>@category</h1>
+	<ul>
+@for(product <- products){
+	<li><a href="/products/@product.getId()">@product.getName()</a></li>
+	<li>@product.getRrp()</li>
+	<br>
+}
+</ul>
+}

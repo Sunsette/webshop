@@ -1,6 +1,10 @@
 @* categories Template File *@
-@(param: Any)
-@index(""){
-<h1>@param</h1>
+@(categories: List[CategoryModel])
+@index("All categories"){
+	<ul>
+	@for(category <- categories){
+		<li>@category.getName()</li>
+	}
+	</ul>
 }
 
